@@ -17,8 +17,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: siteConfig.title,
+  title: siteConfig.name,
   description: siteConfig.description,
+  icons: {
+    icon: siteConfig.avatarUrl,
+  },
 };
 
 export default function RootLayout({
