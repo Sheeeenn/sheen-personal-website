@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { BoboBot } from "@/components/layout/BoboBot";
+import { PageTransition } from "@/components/layout/PageTransition";
 import { Sidebar } from "@/components/layout/Sidebar";
 import { ThemeScript } from "@/components/layout/ThemeScript";
 import { siteConfig } from "@/config/site";
@@ -42,7 +43,7 @@ export default function RootLayout({
         <Sidebar />
         <main className="sm:pl-60">
           <div className="mx-auto max-w-3xl px-6 py-12 sm:px-10">
-            {children}
+            <PageTransition>{children}</PageTransition>
           </div>
         </main>
         <BoboBot />
