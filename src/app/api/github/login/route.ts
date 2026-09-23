@@ -11,7 +11,7 @@ export async function GET(request: Request) {
 
   authorizeUrl.searchParams.set("client_id", clientId);
   authorizeUrl.searchParams.set("redirect_uri", redirectUri);
-  authorizeUrl.searchParams.set("scope", "repo read:user");
+  authorizeUrl.searchParams.set("scope", "repo read:user read:org");
   authorizeUrl.searchParams.set("state", state);
 
   const response = NextResponse.redirect(authorizeUrl);
