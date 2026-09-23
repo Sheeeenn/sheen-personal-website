@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { Avatar } from "@/components/ui/Avatar";
-import { GitHubContributions } from "@/components/ui/GitHubContributions";
 import { navItems, siteConfig, socialLinks } from "@/config/site";
 import { stats } from "@/data/stats";
 
@@ -43,7 +42,6 @@ export default function Home() {
           ))}
         </dl>
 
-        <GitHubContributions />
       </div>
 
       <div className="grid gap-4 sm:grid-cols-2">
