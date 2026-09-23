@@ -3,11 +3,14 @@ import type { Project } from "@/types";
 export const projects: Project[] = [
   {
     slug: "limjo-columagui",
-    title: "Limjo Columagui",
-    description: "Live website built for client Limjo Columagui.",
+    title: "Limjoco, Lumagui, & Co.",
+    description:
+      "Professional services firm offering assurance, accounting, corporate services, business process outsourcing (BPO), tax, and customs advisory solutions.",
     type: "client",
     tags: ["Website"],
+    badges: ["Company Website"],
     href: "https://limjocolumagui.com/",
+    iconUrl: "/limjoco-mark.png",
   },
   {
     slug: "bebelive",

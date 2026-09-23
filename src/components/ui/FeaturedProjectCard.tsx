@@ -35,22 +35,21 @@ export function FeaturedProjectCard({ project }: { project: Project }) {
         )}
 
         <div className="flex-1">
+          <h2 className="text-xl font-semibold tracking-tight">
+            {project.title}
+          </h2>
           {project.badges && project.badges.length > 0 && (
-            <div className="mb-3 flex flex-wrap gap-2">
+            <div className="mt-3 flex flex-wrap gap-2">
               {project.badges.map((badge) => (
                 <span
                   key={badge}
-                  className="rounded-full border border-foreground/15 px-2.5 py-1 text-xs font-medium text-foreground/70"
+                  className="rounded-full border border-foreground/15 bg-background px-2.5 py-1 text-xs font-medium text-foreground/70"
                 >
                   {badge}
                 </span>
               ))}
             </div>
           )}
-
-          <h2 className="text-xl font-semibold tracking-tight">
-            {project.title}
-          </h2>
           <p className="mt-2 max-w-xl text-sm text-foreground/70">
             {project.description}
           </p>

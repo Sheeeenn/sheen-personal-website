@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import { BoboBot } from "@/components/layout/BoboBot";
+
 import { PageTransition } from "@/components/layout/PageTransition";
 import { Sidebar } from "@/components/layout/Sidebar";
 import { ThemeScript } from "@/components/layout/ThemeScript";
@@ -46,7 +46,7 @@ export default function RootLayout({
             <PageTransition>{children}</PageTransition>
           </div>
         </main>
-        <BoboBot />
+
       </body>
     </html>
   );

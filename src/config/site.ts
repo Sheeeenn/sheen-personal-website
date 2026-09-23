@@ -45,11 +45,6 @@ export const navItems: NavItem[] = [
     href: "/resume",
     description: "View or download my resume.",
   },
-  {
-    label: "BoboBot",
-    href: "/bobobot",
-    description: "My self-trained (dumb) AI bot — coming soon.",
-  },
 ];
 
 export const socialLinks: SocialLink[] = [
