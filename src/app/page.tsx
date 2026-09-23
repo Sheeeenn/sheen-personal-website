@@ -41,6 +41,27 @@ export default function Home() {
             </div>
           ))}
         </dl>
+
+        <section className="border-t border-foreground/10 pt-6">
+          <div className="flex items-baseline justify-between gap-4">
+            <h2 className="text-base font-semibold">GitHub contributions</h2>
+            <a
+              href="https://github.com/Sheeeenn"
+              target="_blank"
+              rel="noreferrer"
+              className="text-sm font-medium underline underline-offset-4"
+            >
+              View profile →
+            </a>
+          </div>
+          <div className="mt-4 overflow-x-auto rounded-xl border border-foreground/10 p-3">
+            <img
+              src="https://ghchart.rshah.org/Sheeeenn"
+              alt="GitHub contribution history for Sheeeenn"
+              className="h-auto min-w-[680px] max-w-none"
+            />
+          </div>
+        </section>
       </div>
 
       <div className="grid gap-4 sm:grid-cols-2">

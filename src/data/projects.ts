@@ -2,6 +2,14 @@ import type { Project } from "@/types";
 
 export const projects: Project[] = [
   {
+    slug: "limjo-columagui",
+    title: "Limjo Columagui",
+    description: "Live website built for client Limjo Columagui.",
+    type: "client",
+    tags: ["Website"],
+    href: "https://limjocolumagui.com/",
+  },
+  {
     slug: "bebelive",
     title: "Bebelive",
     description:

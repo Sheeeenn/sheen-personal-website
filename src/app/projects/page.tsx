@@ -5,6 +5,7 @@ import type { ProjectType } from "@/types";
 
 const typeLabels: Record<ProjectType, string> = {
   personal: "Personal",
+  client: "Client Project",
   company: "Company",
   hackathon: "Hackathon",
 };

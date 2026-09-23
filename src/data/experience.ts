@@ -2,10 +2,26 @@ import type { ExperienceItem } from "@/types";
 
 export const experience: ExperienceItem[] = [
   {
+    role: "Junior Software Engineer",
+    company: "Vanta Platform Co.",
+    employmentType: "Full-time",
+    period: "October 2026 — Present",
+    bullets: [],
+    skills: ["iOS", "Android", "Backend Development"],
+  },
+  {
+    role: "Team Lead / Software Engineer",
+    company: "One Click Away Technologies",
+    employmentType: "Full-time",
+    period: "September 2026 — Present",
+    bullets: [],
+    skills: ["iOS", "Android", "Backend Development"],
+  },
+  {
     role: "Backend Developer | Team Lead",
     company: "Impulse101 IT Solutions",
     employmentType: "Full-time",
-    period: "November 2025 — June 2026",
+    period: "October 2025 — September 2026",
     bullets: [
       "Led backend development for a mobile product with 50,000+ downloads on Google Play, designing scalable RESTful APIs that reduced average response time and improved the user experience.",
       "Designed and managed relational and NoSQL database schemas to streamline data access patterns, reducing query latency while supporting Kubernetes deployments and CI/CD pipeline automation that significantly cut deployment time.",

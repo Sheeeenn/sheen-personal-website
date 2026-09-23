@@ -30,11 +30,13 @@ export default function ExperiencePage() {
             <p className="text-sm text-foreground/50">
               {[item.employmentType, item.location].filter(Boolean).join(" · ")}
             </p>
-            <ul className="mt-3 list-disc space-y-1.5 pl-5 text-sm text-foreground/70">
-              {item.bullets.map((bullet) => (
-                <li key={bullet}>{bullet}</li>
-              ))}
-            </ul>
+            {item.bullets.length > 0 && (
+              <ul className="mt-3 list-disc space-y-1.5 pl-5 text-sm text-foreground/70">
+                {item.bullets.map((bullet) => (
+                  <li key={bullet}>{bullet}</li>
+                ))}
+              </ul>
+            )}
             {item.skills && (
               <div className="mt-3 flex flex-wrap gap-2">
                 {item.skills.map((skill) => (

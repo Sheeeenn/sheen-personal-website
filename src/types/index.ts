@@ -14,7 +14,7 @@ export interface SocialLink {
   href: string;
 }
 
-export type ProjectType = "personal" | "company" | "hackathon";
+export type ProjectType = "personal" | "client" | "company" | "hackathon";
 
 export interface Project {
   slug: string;
