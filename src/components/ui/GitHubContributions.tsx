@@ -11,7 +11,7 @@ type Contribution = {
 type ContributionsResponse = {
   total: number;
   contributions: Contribution[];
-  syncedAt?: string | null;
+  fetchedAt?: string;
 };
 
 const levelClasses = [
@@ -26,7 +26,7 @@ export function GitHubContributions() {
   const [data, setData] = useState<ContributionsResponse | null>(null);
 
   useEffect(() => {
-    fetch(`/github-contributions.json?cache=${Date.now()}`, {
+    fetch("/api/github-contributions", {
       cache: "no-store",
     })
       .then((response) => response.json())
@@ -59,19 +59,14 @@ export function GitHubContributions() {
               : "Loading activity…"}
           </p>
         </div>
-        <div className="flex shrink-0 items-center gap-3 text-sm font-medium">
-          <a href="/api/github/login" className="underline underline-offset-4">
-            Sync private contributions
-          </a>
-          <a
-            href="https://github.com/Sheeeenn"
-            target="_blank"
-            rel="noreferrer"
-            className="text-foreground/60 underline underline-offset-4"
-          >
-            Profile →
-          </a>
-        </div>
+        <a
+          href="https://github.com/Sheeeenn"
+          target="_blank"
+          rel="noreferrer"
+          className="shrink-0 text-sm font-medium underline underline-offset-4"
+        >
+          View profile →
+        </a>
       </div>
 
       <div className="mt-5 rounded-xl border border-foreground/10 p-4">
