@@ -5,8 +5,8 @@ import { stats } from "@/data/stats";
 
 export default function Home() {
   return (
-    <div className="flex max-w-2xl flex-col gap-12">
-      <div className="flex flex-col gap-6">
+    <div className="home-shell flex max-w-2xl flex-col gap-12">
+      <div className="home-hero flex flex-col gap-6">
         <Avatar />
         <div>
           <h1 className="text-2xl font-semibold tracking-tight sm:text-3xl">
@@ -24,16 +24,16 @@ export default function Home() {
               href={link.href}
               target={link.label === "Email" ? undefined : "_blank"}
               rel="noreferrer"
-              className="text-foreground/60 underline underline-offset-4 hover:text-foreground"
+              className="social-link text-foreground/60 underline underline-offset-4 hover:text-foreground"
             >
               {link.label}
             </a>
           ))}
         </div>
 
-        <dl className="flex flex-wrap gap-x-10 gap-y-4 border-t border-foreground/10 pt-6">
+        <dl className="home-stats flex flex-wrap gap-x-10 gap-y-4 border-t border-foreground/10 pt-6">
           {stats.map((stat) => (
-            <div key={stat.label} className="text-center">
+            <div key={stat.label} className="stat-item text-center">
               <dt className="text-2xl font-semibold tracking-tight">
                 {stat.value}
               </dt>
@@ -44,11 +44,11 @@ export default function Home() {
 
       </div>
 
-      <div className="grid gap-4 sm:grid-cols-2">
+      <div className="home-nav-grid grid gap-4 sm:grid-cols-2">
         {navItems.map((item) => (
           <div
             key={item.href}
-            className="flex flex-col justify-between rounded-2xl border border-foreground/10 p-5"
+            className="nav-card flex flex-col justify-between rounded-2xl border border-foreground/10 p-5"
           >
             <div>
               <h2 className="text-base font-semibold">{item.label}</h2>
@@ -60,9 +60,9 @@ export default function Home() {
             </div>
             <Link
               href={item.href}
-              className="mt-4 text-sm font-medium underline underline-offset-4"
+              className="nav-card-link mt-4 text-sm font-medium underline underline-offset-4"
             >
-              View {item.label} →
+              View {item.label} <span aria-hidden="true">→</span>
             </Link>
           </div>
         ))}

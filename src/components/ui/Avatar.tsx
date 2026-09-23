@@ -4,7 +4,7 @@ import { siteConfig } from "@/config/site";
 // Drop your photo at public/avatar.jpg (siteConfig.avatarUrl) to replace this.
 export function Avatar() {
   return (
-    <div className="h-32 w-32 overflow-hidden rounded-2xl border border-foreground/15 bg-foreground/5">
+    <div className="avatar-frame h-32 w-32 overflow-hidden rounded-2xl border border-foreground/15 bg-foreground/5">
       <Image
         src={siteConfig.avatarUrl}
         alt={siteConfig.name}
